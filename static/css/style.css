@@ -1,0 +1,28 @@
+a:hover {
+	text-decoration: none;
+}
+
+h4, h5 {
+	margin: 30px;
+}
+h1, h3 {
+	margin-top: 50px;
+	text-align: center;
+}
+form {
+	text-align: center;
+}
+.row {
+	margin-right: 0px;
+}
+.head {
+	background-color: #34CFBE;
+	height: 100px;
+	width: 100%;
+}
+
+
+.login {
+	margin-top: 200px;
+}
+

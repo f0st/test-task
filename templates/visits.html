@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% if access %}
+	<h1>Hello, {{ email }} !</h1>
+	<h3>Your number of visits: {{visits}}</h3>
+	<form action="{{url_for('logout')}}">
+		<button class="btn btn-primary btn-lg">Log out</button>
+	</form>
+	
+{% else %}
+		<h1>Sorry, but you dont have access!</h1>
+		<h3>Enter your email to access</h3>
+		<form action="{{url_for('get_access')}}" method="POST">
+			<input type="email" name="email">
+			<input type="submit" name="send" value="Get access" class="btn-primary">
+		</form>
+{% endif %}
+{% endblock %}

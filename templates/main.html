@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test task</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+	<div class="head">
+		<div class="row">
+			<div class="col-md-3">
+				{% if email|length %}
+				    <h4>Hello, {{ email }}</h4>
+				{% else %}
+				    <h4>Hello, Guest!</h4>
+				{% endif %}
+				
+			</div>
+			<div class="col-md-1">
+				<h5><a href="/">HOME</a></h5>
+			</div>
+			<div class="col-md-2">
+				<h5><a href="{{url_for('visits')}}">View visitin</a></h5>
+			</div>
+		</div>
+	</div>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>
